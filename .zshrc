@@ -230,5 +230,7 @@ export LANG=en_US.UTF-8
 # Some sensitive work stuff and other things I dont want to store in .dotfiles repo
 source $HOME/.some_stuff
 
-# I am living in it
-tmux-sessionizer base || tmux attach-session -t $(tmux list-sessions -F '#{session_name}' | head -n 1) 
+# Run only if not inside a tmux session
+if [ -z "$TMUX" ]; then
+    tmux-sessionizer base || tmux attach-session -t $(tmux list-sessions -F '#{session_name}' | head -n 1)
+fi
