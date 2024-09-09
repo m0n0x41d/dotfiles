@@ -234,3 +234,6 @@ source $HOME/.some_stuff
 if [ -z "$TMUX" ]; then
     tmux-sessionizer base || tmux attach-session -t $(tmux list-sessions -F '#{session_name}' | head -n 1)
 fi
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
+source ~/.zfunc/_mosh
