@@ -135,6 +135,11 @@ _G.packer_plugins = {
     path = "/Users/m0n0x41d/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
+  ["lsp-timeout.nvim"] = {
+    loaded = true,
+    path = "/Users/m0n0x41d/.local/share/nvim/site/pack/packer/start/lsp-timeout.nvim",
+    url = "https://github.com/hinell/lsp-timeout.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/m0n0x41d/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -171,7 +176,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-treesitter-context"] = {
-    config = { "\27LJ\2\n¹\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\17line_numbers\2\14max_lines\3\3\venable\2\22min_window_height\3\n\tmode\vcursor\vzindex\3\3\15trim_scope\nouter\24multiline_threshold\3\5\nsetup\23treesitter-context\frequire\0" },
+    config = { "\27LJ\2\n¹\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\24multiline_threshold\3\5\tmode\vcursor\15trim_scope\nouter\vzindex\3\20\22min_window_height\3\n\14max_lines\3\5\17line_numbers\2\venable\2\nsetup\23treesitter-context\frequire\0" },
     loaded = true,
     path = "/Users/m0n0x41d/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
@@ -202,6 +207,12 @@ _G.packer_plugins = {
     path = "/Users/m0n0x41d/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
     url = "https://github.com/theprimeagen/refactoring.nvim"
   },
+  ["supermaven-nvim"] = {
+    config = { "\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20supermaven-nvim\frequire\0" },
+    loaded = true,
+    path = "/Users/m0n0x41d/.local/share/nvim/site/pack/packer/start/supermaven-nvim",
+    url = "https://github.com/supermaven-inc/supermaven-nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/m0n0x41d/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -231,18 +242,22 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
-time([[Config for trouble.nvim]], false)
--- Config for: nvim-treesitter-context
-time([[Config for nvim-treesitter-context]], true)
-try_loadstring("\27LJ\2\n¹\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\17line_numbers\2\14max_lines\3\3\venable\2\22min_window_height\3\n\tmode\vcursor\vzindex\3\3\15trim_scope\nouter\24multiline_threshold\3\5\nsetup\23treesitter-context\frequire\0", "config", "nvim-treesitter-context")
-time([[Config for nvim-treesitter-context]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
 time([[Config for gitsigns.nvim]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
+-- Config for: supermaven-nvim
+time([[Config for supermaven-nvim]], true)
+try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20supermaven-nvim\frequire\0", "config", "supermaven-nvim")
+time([[Config for supermaven-nvim]], false)
+-- Config for: nvim-treesitter-context
+time([[Config for nvim-treesitter-context]], true)
+try_loadstring("\27LJ\2\n¹\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\b\24multiline_threshold\3\5\tmode\vcursor\15trim_scope\nouter\vzindex\3\20\22min_window_height\3\n\14max_lines\3\5\17line_numbers\2\venable\2\nsetup\23treesitter-context\frequire\0", "config", "nvim-treesitter-context")
+time([[Config for nvim-treesitter-context]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
