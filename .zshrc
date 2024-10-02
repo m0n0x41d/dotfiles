@@ -125,7 +125,7 @@ export PATH="$PATH:/Users/m0n0x41d/.local/bin"
 grep -slR "PRIVATE" ~/.ssh/ | xargs ssh-add
 
 export PATH="$HOME/bin:$PATH"
-source $("/Users/m0n0x41d/bin/trdl" use werf "1.2" "stable")
+source $("/Users/ivanzakutnii/bin/trdl" use werf "1.2" "stable")
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # kubectl stuff
@@ -236,4 +236,7 @@ if [ -z "$TMUX" ]; then
 fi
 
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
-source ~/.zfunc/_mosh
+
+# Created by `pipx` on 2024-10-02 20:39:24
+export PATH="$PATH:/Users/ivanzakutnii/.dotfiles/.local/bin"
+[[ "$PATH" == *"$HOME/bin:"* ]] || export PATH="$HOME/bin:$PATH"
