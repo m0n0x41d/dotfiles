@@ -112,15 +112,17 @@ return require('packer').startup(function(use)
     }
 
 
-    use {
-        "supermaven-inc/supermaven-nvim",
-        config = function()
-            require("supermaven-nvim").setup({})
-        end,
-    }
 
     use {
         "hinell/lsp-timeout.nvim",
         requires = { "neovim/nvim-lspconfig" }
     }
+
+    use {
+      "supermaven-inc/supermaven-nvim",
+      config = function()
+        require("supermaven-nvim").setup({})
+      end,
+    }
+
 end)

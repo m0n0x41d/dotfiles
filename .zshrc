@@ -114,7 +114,7 @@ source $ZSH/oh-my-zsh.sh
 export BASH_SILENCE_DEPRECATION_WARNING=1
 PATH="/opt/homebrew/bin:$PATH"
 
-eval "$(oh-my-posh init zsh --config ~/.config/posh/atomic.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/posh/atlas-atomic.omp.json)"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -229,6 +229,7 @@ export LANG=en_US.UTF-8
 
 # Some sensitive work stuff and other things I dont want to store in .dotfiles repo
 source $HOME/.some_stuff
+export PATH="$PATH:/Users/ivanzakutnii/.tools/bin"
 
 # Run only if not inside a tmux session
 if [ -z "$TMUX" ]; then
@@ -238,5 +239,6 @@ fi
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
 
 # Created by `pipx` on 2024-10-02 20:39:24
-export PATH="$PATH:/Users/ivanzakutnii/.dotfiles/.local/bin"
+export PATH="$PATH:/Users/ivanzakutnii/.local/bin"
 [[ "$PATH" == *"$HOME/bin:"* ]] || export PATH="$HOME/bin:$PATH"
+source ~/.zfunc/_mosh
