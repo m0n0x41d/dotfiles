@@ -56,6 +56,17 @@ end)
 
 lsp.setup()
 
+require('lspconfig').gleam.setup({
+    on_attach = function(client, bufnr)
+        -- This will use your existing keymaps from the on_attach function
+        lsp.on_attach(client, bufnr)
+    end,
+    capabilities = lsp.capabilities,
+    cmd = { "gleam", "lsp" },
+    filetypes = { "gleam" },
+    root_dir = require('lspconfig.util').root_pattern("gleam.toml"),
+})
+
 vim.diagnostic.config({
     virtual_text = true
 })
